@@ -170,6 +170,12 @@ public class HongbaoService extends AccessibilityService implements SharedPrefer
         }
     }
 
+    /**
+     * 监控聊天列表
+     *
+     * @param event
+     * @return
+     */
     private boolean watchList(AccessibilityEvent event) {
         if (mListMutex) return false;
         mListMutex = true;
