@@ -7,19 +7,20 @@ import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Path;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.graphics.Path;
 import android.preference.PreferenceManager;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
-import android.util.DisplayMetrics;
-import xyz.monkeytong.hongbao.utils.HongbaoSignature;
-import xyz.monkeytong.hongbao.utils.PowerUtil;
 
 import java.util.List;
+
+import xyz.monkeytong.hongbao.utils.HongbaoSignature;
+import xyz.monkeytong.hongbao.utils.PowerUtil;
 
 public class HongbaoService extends AccessibilityService implements SharedPreferences.OnSharedPreferenceChangeListener {
     private static final String WECHAT_DETAILS_EN = "Details";
@@ -107,6 +108,9 @@ public class HongbaoService extends AccessibilityService implements SharedPrefer
         }
     }
 
+    /**
+     * 打开红包
+     */
     private void openPacket() {
         DisplayMetrics metrics = getResources().getDisplayMetrics();
         float dpi = metrics.density;
