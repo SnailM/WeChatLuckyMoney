@@ -71,6 +71,11 @@ public class HongbaoService extends AccessibilityService implements SharedPrefer
         }
     }
 
+    /**
+     * 监控聊天
+     *
+     * @param event
+     */
     private void watchChat(AccessibilityEvent event) {
         this.rootNodeInfo = getRootInActiveWindow();
 
